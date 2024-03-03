@@ -46,4 +46,4 @@ WORKDIR /app
 
 COPY --from=builder /app/_build/prod/rel ./
 
-CMD /app/protohackers/bin/protohqckers start
+CMD /app/protohackers/bin/protohackers start

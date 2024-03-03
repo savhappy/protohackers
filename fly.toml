@@ -1,20 +1,28 @@
-# fly.toml app configuration file generated for protohackersinelixir-lingering-fog-3745-patient-hill-931 on 2024-02-29T09:18:20-07:00
+# fly.toml app configuration file generated for protohackersinelixirv2-morning-voice-7448 on 2024-03-03T12:46:41-07:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'protohackersinelixir-lingering-fog-3745-patient-hill-931'
+app = 'protohackersinelixirv2-morning-voice-7448'
 primary_region = 'sjc'
+kill_signal = 'SIGTERM'
 
 [build]
 
 [http_service]
-  internal_port = 8080
+  internal_port = 5001
   force_https = true
   auto_stop_machines = true
   auto_start_machines = true
   min_machines_running = 0
   processes = ['app']
+
+[[services]]
+  protocol = ''
+  internal_port = 0
+
+[[services.ports]]
+    port = 5001
 
 [[vm]]
   memory = '1gb'
